@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cotización de preproducción y arreglo musical para Edilberto Chalacán — Julián Andrés Ahunca." />
+  <title>Edilberto Chalacán — Preproducción y arreglo musical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#171717;
+      --muted:#6f6f6a;
+      --line:#deded8;
+      --paper:#f7f7f3;
+      --white:#ffffff;
+      --accent:#315b57;
+      --accent-soft:#e6ece9;
+      --max:1120px;
+      --serif:"Fraunces", Georgia, serif;
+      --sans:"Inter", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--paper);color:var(--ink);
+      font-family:var(--sans);font-size:15px;line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit}
+    .page{max-width:var(--max);margin:auto;padding:0 34px}
+    .section{padding:110px 0;border-bottom:1px solid var(--line)}
+    .kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+    h1,h2,h3{
+      font-family:var(--serif);font-weight:500;letter-spacing:-.035em;
+      line-height:1.05;margin:0;
+    }
+    h1{font-size:clamp(58px,9vw,112px);max-width:900px}
+    h2{font-size:clamp(42px,6vw,70px);max-width:850px}
+    h3{font-size:25px}
+    p{max-width:690px}
+    .lead{font-size:clamp(19px,2.1vw,25px);line-height:1.45;max-width:720px}
+    .small{font-size:13px;color:var(--muted)}
+    .rule{height:1px;background:var(--line);margin:36px 0}
+
+    .cover{
+      min-height:100vh;display:flex;flex-direction:column;
+      justify-content:space-between;padding-top:32px;padding-bottom:42px;
+    }
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
+    .brand{font-weight:600;letter-spacing:-.02em}
+    .meta{text-align:right;color:var(--muted);font-size:12px;line-height:1.55}
+    .cover-main{padding:100px 0 80px}
+    .cover-main .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;color:var(--accent);
+      font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:28px;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+    .cover-sub{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-top:48px}
+    .cover-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;gap:30px}
+
+    .intro-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
+    .intro-grid p{margin-top:0}
+    .quote{margin-top:42px;font-family:var(--serif);font-size:clamp(28px,3.2vw,43px);line-height:1.15;max-width:720px}
+
+    .process{margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+    .process-card{padding:30px 26px 30px 0;border-right:1px solid var(--line)}
+    .process-card:nth-child(3n){border-right:0;padding-left:26px}
+    .process-card:nth-child(3n+2){padding-left:26px}
+    .num{font-size:11px;color:var(--accent);letter-spacing:.1em;font-weight:600;margin-bottom:45px}
+    .process-card p{color:var(--muted);font-size:14px}
+
+    .scope{
+      margin-top:70px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+      background:var(--line);border:1px solid var(--line);
+    }
+    .scope-item{background:var(--paper);padding:34px}
+    .scope-item h3{margin-bottom:16px}
+    ul{margin:0;padding-left:18px}
+    li{margin:6px 0}
+
+    .callout{margin-top:60px;padding:42px;background:var(--accent-soft)}
+    .callout p{margin-bottom:0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:90px;margin-top:65px}
+    .list-block{border-top:1px solid var(--line);padding-top:24px}
+    .list-block + .list-block{margin-top:40px}
+
+    .investment{background:var(--ink);color:#fff;border-bottom:0}
+    .investment .kicker,.investment .small{color:#b9b9b2}
+    .investment h2{max-width:700px}
+    .investment-inner{margin-top:70px}
+    .big-price{
+      font-family:var(--serif);font-size:clamp(60px,10vw,125px);
+      line-height:.95;letter-spacing:-.055em;margin-bottom:60px;
+    }
+    .price-note{font-size:15px;color:#b9b9b2;max-width:620px}
+    .conditions{display:grid;grid-template-columns:1fr 1.6fr;gap:80px}
+    .condition{padding:25px 0;border-top:1px solid var(--line)}
+    .condition h3{font-size:21px;margin-bottom:9px}
+    .condition p{margin:0;color:var(--muted);font-size:14px}
+
+    .closing{
+      min-height:70vh;display:flex;flex-direction:column;
+      justify-content:center;border-bottom:0;
+    }
+    .closing h2{max-width:850px}
+    .signature{margin-top:80px;font-size:13px}
+    .signature strong{display:block;font-size:15px;margin-bottom:3px}
+
+    @media (max-width:800px){
+      .page{padding:0 20px}.section{padding:78px 0}.cover{min-height:92vh}
+      .topbar,.cover-sub,.cover-foot{flex-direction:column;align-items:flex-start}
+      .meta{text-align:left}.cover-main{padding:70px 0}
+      .intro-grid,.conditions{grid-template-columns:1fr;gap:35px}
+      .process{grid-template-columns:1fr}
+      .process-card,.process-card:nth-child(3n),.process-card:nth-child(3n+2){
+        padding:28px 0;border-right:0;border-bottom:1px solid var(--line)
+      }
+      .process-card:last-child{border-bottom:0}
+      .scope,.split{grid-template-columns:1fr;gap:0}.scope-item{padding:27px}.split{gap:55px}
+      .callout{padding:28px}
+    }
+    @media print{
+      body{background:#fff}.page{max-width:none;padding:0 20mm}
+      .section{break-inside:avoid}.cover{min-height:auto;height:250mm}
+      .investment{background:#171717;color:#fff}a{text-decoration:none}
+    }
+  </style>
+</head>
+
+<body>
+<main>
+
+  <!-- 01 PORTADA -->
+  <section class="cover page">
+    <div class="topbar">
+      <div class="brand">Julián Andrés Ahunca</div>
+      <div class="meta">
+        Cotización de producción musical<br>
+        Septiembre 2026
+      </div>
+    </div>
+
+    <div class="cover-main">
+      <div class="eyebrow"><span class="dot"></span> 01 · Preproducción y arreglo</div>
+      <h1>Edilberto<br>Chalacán</h1>
+
+      <div class="cover-sub">
+        <p class="lead">Preproducción · Arreglo musical · Maqueta digital</p>
+        <div class="small">Desarrollo musical previo a la grabación final</div>
+      </div>
+    </div>
+
+    <div class="cover-foot">
+      <span>Septiembre 2026</span>
+      <span>Vigencia: 1 mes desde la fecha de emisión</span>
+    </div>
+  </section>
+
+  <!-- 02 PUNTO DE PARTIDA -->
+  <section class="section page">
+    <div class="kicker">02 · Punto de partida</div>
+    <div class="intro-grid">
+      <h2>Primero resolvemos la canción. Después grabamos.</h2>
+      <div>
+        <p class="lead">Esta propuesta se concentra en desarrollar la dirección musical de una canción antes de entrar a su producción y grabación final.</p>
+        <p>Trabajaremos sobre la canción y las referencias entregadas para definir su estructura, instrumentación y arreglo, construyendo una maqueta digital que permita escuchar y evaluar la propuesta antes de avanzar.</p>
+        <div class="quote">La preproducción busca resolver antes de grabar.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 ALCANCE -->
+  <section class="section page">
+    <div class="kicker">03 · Alcance del acompañamiento</div>
+    <h2>Una etapa para definir la dirección musical.</h2>
+
+    <div class="process">
+      <article class="process-card">
+        <div class="num">01</div>
+        <h3>Estructura</h3>
+        <p>Desarrollo y organización de la estructura musical de la canción.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">02</div>
+        <h3>Instrumentación</h3>
+        <p>Definición de los elementos e instrumentos que conformarán el arreglo.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">03</div>
+        <h3>Arreglo</h3>
+        <p>Desarrollo de las partes musicales y dirección del arreglo.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">04</div>
+        <h3>Programación</h3>
+        <p>Construcción de instrumentos mediante librerías de audio digitales.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">05</div>
+        <h3>Maqueta</h3>
+        <p>Construcción de una versión de referencia para escuchar el desarrollo completo.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">06</div>
+        <h3>Refinamiento</h3>
+        <p>Ajustes de la propuesta dentro de las revisiones contempladas.</p>
+      </article>
+    </div>
+
+    <div class="callout">
+      <strong>Instrumentos digitales</strong>
+      <p>El arreglo se desarrolla utilizando instrumentos y librerías de audio digitales. Esta versión funciona como una representación de la propuesta musical y como guía para una posterior grabación con músicos e instrumentos reales.</p>
+    </div>
+  </section>
+
+  <!-- 04 MAQUETA -->
+  <section class="section page">
+    <div class="kicker">04 · Maqueta base</div>
+    <div class="intro-grid">
+      <h2>La canción necesita una base clara para comenzar a desarrollarse.</h2>
+      <div>
+        <p class="lead">La preproducción incluye una sesión de estudio para registrar la interpretación base sobre la que se desarrollará el arreglo.</p>
+      </div>
+    </div>
+
+    <div class="scope">
+      <div class="scope-item">
+        <h3>Hasta 2 horas de estudio</h3>
+        <p>Sesión destinada exclusivamente a registrar la maqueta base de la canción.</p>
+      </div>
+      <div class="scope-item">
+        <h3>Configuración</h3>
+        <ul>
+          <li>Guitarra + voz</li>
+          <li>o piano + voz</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Propósito de la sesión</strong>
+      <p>La grabación de esta maqueta no corresponde a la producción final. Su función es proporcionar una base interpretativa clara para desarrollar el arreglo y establecer una referencia del proyecto.</p>
+    </div>
+  </section>
+
+  <!-- 05 TRABAJO COLABORATIVO -->
+  <section class="section page">
+    <div class="kicker">05 · Trabajo colaborativo</div>
+    <div class="intro-grid">
+      <h2>El arreglo se construye en comunicación constante.</h2>
+      <div>
+        <p class="lead">La preproducción no se desarrolla de manera aislada.</p>
+        <p>Las decisiones relacionadas con estructura, instrumentación, dirección musical y desarrollo del arreglo serán revisadas durante el proceso con el cliente.</p>
+        <p>La intención es conservar la identidad de la canción mientras construimos una propuesta musical clara y preparada para la siguiente etapa.</p>
+      </div>
+    </div>
+
+    <div class="split">
+      <div>
+        <div class="list-block">
+          <h3>Durante el proceso</h3>
+          <ul>
+            <li>Revisamos la dirección musical.</li>
+            <li>Evaluamos decisiones de instrumentación.</li>
+            <li>Ajustamos el desarrollo del arreglo.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="list-block">
+          <h3>Objetivo</h3>
+          <p>Que la versión final de la preproducción represente una dirección musical acordada y pueda utilizarse como guía para la producción posterior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 ENTREGABLE -->
+  <section class="section page">
+    <div class="kicker">06 · Entregable</div>
+    <h2>Una maqueta que permita escuchar hacia dónde va la canción.</h2>
+
+    <div class="scope">
+      <div class="scope-item">
+        <h3>Maqueta digital</h3>
+        <p>Versión de referencia con el arreglo e instrumentación desarrollados mediante instrumentos digitales.</p>
+      </div>
+      <div class="scope-item">
+        <h3>Guía para grabación</h3>
+        <p>La maqueta servirá como referencia para una posterior producción con músicos e instrumentos reales.</p>
+      </div>
+    </div>
+
+    <p class="small" style="margin-top:30px;">La maqueta corresponde a una etapa de preproducción y no constituye una mezcla o master final de distribución.</p>
+  </section>
+
+  <!-- 07 REVISIONES -->
+  <section class="section page">
+    <div class="kicker">07 · Revisiones</div>
+    <div class="intro-grid">
+      <h2>El desarrollo contempla espacio para ajustar la propuesta.</h2>
+      <div>
+        <p class="lead">La propuesta incluye hasta 2 versiones de desarrollo durante la etapa de preproducción.</p>
+        <p>Los cambios que impliquen una modificación sustancial de la estructura, arreglo o dirección musical una vez aprobada una versión podrán considerarse trabajo adicional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 NO INCLUYE -->
+  <section class="section page">
+    <div class="kicker">08 · Qué no incluye</div>
+    <div class="intro-grid">
+      <h2>El alcance está definido para evitar incertidumbre.</h2>
+      <div>
+        <p class="lead">Esta propuesta corresponde exclusivamente a la etapa de preproducción y arreglo musical.</p>
+      </div>
+    </div>
+
+    <div class="scope">
+      <div class="scope-item">
+        <h3>Músicos intérpretes</h3>
+        <p>No incluye honorarios ni contratación de músicos para la producción final.</p>
+      </div>
+      <div class="scope-item">
+        <h3>Grabación final</h3>
+        <p>No incluye sesiones de grabación de la producción definitiva. Solo contempla las 2 horas destinadas a la maqueta base.</p>
+      </div>
+      <div class="scope-item">
+        <h3>Edición</h3>
+        <p>No incluye edición de la producción final.</p>
+      </div>
+      <div class="scope-item">
+        <h3>Mezcla y masterización</h3>
+        <p>No incluye mezcla, masterización ni servicios técnicos posteriores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 PROCESO -->
+  <section class="section page">
+    <div class="kicker">09 · Proceso</div>
+    <h2>Escuchar. Construir. Producir. Refinar.</h2>
+
+    <div class="process">
+      <article class="process-card">
+        <div class="num">01</div>
+        <h3>Comprender</h3>
+        <p>Revisamos la canción, referencias e intención musical.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">02</div>
+        <h3>Construir</h3>
+        <p>Registramos la maqueta base de guitarra + voz o piano + voz.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">03</div>
+        <h3>Diseñar</h3>
+        <p>Definimos estructura, instrumentación y dirección del arreglo.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">04</div>
+        <h3>Producir</h3>
+        <p>Programamos la propuesta utilizando instrumentos digitales.</p>
+      </article>
+      <article class="process-card">
+        <div class="num">05</div>
+        <h3>Refinar</h3>
+        <p>Revisamos y ajustamos la propuesta en comunicación con el cliente.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 10 INVERSIÓN -->
+  <section class="section investment">
+    <div class="page">
+      <div class="kicker">10 · Inversión</div>
+      <h2>Una etapa completa para llegar a la grabación con dirección.</h2>
+
+      <div class="investment-inner">
+        <div class="big-price">$800.000 <span style="font-family:var(--sans);font-size:.25em;letter-spacing:0;">COP</span></div>
+
+        <div class="payments">
+          <div class="payment" style="padding-left:0;">
+            <div class="label">Servicio</div>
+            <div class="amount">Preproducción</div>
+            <div class="small">Desarrollo musical y estructura</div>
+          </div>
+          <div class="payment">
+            <div class="label">Arreglo</div>
+            <div class="amount">Digital</div>
+            <div class="small">Instrumentos mediante librerías de audio</div>
+          </div>
+          <div class="payment">
+            <div class="label">Maqueta</div>
+            <div class="amount">2 horas</div>
+            <div class="small">Guitarra + voz o piano + voz</div>
+          </div>
+        </div>
+
+        <p class="price-note" style="margin-top:35px;">El valor corresponde al alcance completo descrito en esta propuesta, incluyendo la sesión de maqueta, desarrollo del arreglo digital, comunicación durante el proceso y las revisiones contempladas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CONDICIONES -->
+  <section class="section page">
+    <div class="kicker">11 · Plazo y condiciones</div>
+    <div class="conditions">
+      <div>
+        <h2>Un alcance claro. Un proceso definido.</h2>
+      </div>
+      <div>
+        <article class="condition">
+          <h3>01 · Forma de pago</h3>
+          <p>El proyecto se inicia con el pago del 100% del valor total de la propuesta.</p>
+        </article>
+        <article class="condition">
+          <h3>02 · Inicio</h3>
+          <p>El pago confirma la aprobación del alcance y permite programar e iniciar el desarrollo del proyecto.</p>
+        </article>
+        <article class="condition">
+          <h3>03 · Tiempo estimado</h3>
+          <p>El tiempo estimado de entrega es de 1 mes, contado desde la confirmación del pago y la recepción del material necesario para iniciar.</p>
+        </article>
+        <article class="condition">
+          <h3>04 · Cambios de alcance</h3>
+          <p>Los cambios sustanciales de estructura, arreglo o dirección musical podrán requerir una cotización adicional.</p>
+        </article>
+        <article class="condition">
+          <h3>05 · Material del cliente</h3>
+          <p>Los tiempos dependen también de la entrega oportuna de la información y materiales necesarios para desarrollar el proyecto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 VIGENCIA -->
+  <section class="section page">
+    <div class="kicker">12 · Vigencia</div>
+    <div class="intro-grid">
+      <h2>Un mes para aceptar estas condiciones.</h2>
+      <div>
+        <p class="lead">Esta cotización mantiene sus condiciones económicas durante un período de un mes a partir de su fecha de emisión.</p>
+        <p>La vigencia de la cotización corresponde al período durante el cual se mantienen las condiciones económicas presentadas.</p>
+        <p>La vigencia no determina la duración de ejecución del proyecto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 CIERRE -->
+  <section class="closing page">
+    <div class="kicker">13 · Cierre</div>
+    <h2>Antes de grabar, necesitamos saber qué queremos construir.</h2>
+
+    <div class="signature">
+      <strong>Julián Andrés Ahunca</strong>
+      Productor · Músico · Ingeniero de audio
+      <br><br>
+      <strong>Edilberto Chalacán</strong>
+      Cotización de preproducción y arreglo musical · 2026
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
